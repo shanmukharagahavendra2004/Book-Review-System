@@ -9,12 +9,14 @@ import BookList from './components/BookList';
 import ReviewForm from './components/ReviewForm';
 import ReviewList from './components/ReviewList';
 import BookDetails from './components/BookDetails';
+import Landing from './components/Landing';
 function App() {
   return (
     <div className="App">
       <BrowserRouter>     
         <Home /> 
-        <Routes>       
+        <Routes>     
+          <Route path='/' element={<Landing/>}/>
           <Route path='/signin' element={<Signup/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/bookform' element={<BookForm/>}/>
